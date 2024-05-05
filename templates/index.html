@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Group Identification</title>
+    <style>
+       body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://scontent.xx.fbcdn.net/v/t1.15752-9/438115853_454271750589199_1055235032389431579_n.jpg?stp=dst-jpg_p403x403&_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_ohc=UoCh76MBkXEQ7kNvgFumuEs&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_Q7cD1QHwFcop6XGMGkyXg5xfhR073bzkD-dvZq4gG5-Hj6McLQ&oe=665C1E36');
+            background-size: 2000px 1200px;
+            background-position: center;
+            background-repeat: no-repeat; /* Prevent repetition */
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 220px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for better readability */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        form {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="file"] {
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        p.message {
+            text-align: center;
+            color: #ff0000;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Blood Group Identification</h1>
+        <form method="POST" enctype="multipart/form-data">
+            <label for="file">Upload Image:</label>
+            <input type="file" name="file" accept=".png, .jpg, .jpeg, .BMP">
+            <input type="submit" value="Upload Image">
+        </form>
+        <hr>
+        <form method="POST">
+            <label for="fingerprint">Scan Fingerprint:</label>
+            <button type="button" onclick="scanFingerprint()">Scan Fingerprint</button><br><br>
+            <input type="hidden" name="fingerprintData" id="fingerprintData">
+            <input type="submit" value="Submit Fingerprint">
+        </form>
+        {% if message %}
+            <p class="message">{{ message }}</p>
+        {% endif %}
+    </div>
+
+    <script>
+        function scanFingerprint() {
+            // Placeholder function for scanning fingerprint
+            // You can implement your logic for fingerprint scanning here
+            alert("Fingerprint scanned successfully!");
+            document.getElementById("fingerprintData").value = "fingerprint_data_placeholder";
+        }
+    </script>
+</body>
+</html>

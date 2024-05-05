@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis Result</title>
+    <style>
+       body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://scontent.xx.fbcdn.net/v/t1.15752-9/438115853_454271750589199_1055235032389431579_n.jpg?stp=dst-jpg_p403x403&_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_ohc=UoCh76MBkXEQ7kNvgFumuEs&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_Q7cD1QHwFcop6XGMGkyXg5xfhR073bzkD-dvZq4gG5-Hj6McLQ&oe=665C1E36');
+    background-size: 2000px 1200px;
+    background-position: center;
+    background-repeat: no-repeat; /* Prevent repetition */
+    margin: 500px 0 0 0; /* 50px top margin, 0 right, 0 bottom, 0 left */
+    padding: 0;
+}
+
+        .container {
+            max-width: 800px;
+            margin: 10% auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        p {
+            font-size: 18px;
+            color: #666;
+        }
+        .result {
+            font-weight: bold;
+            color: #00aaff;
+            text-transform: uppercase;
+            font-size: 20px;
+            margin-top: 10px;
+        }
+
+        @media screen and (max-width: 600px) {
+            .container {
+                margin: 20% auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Analysis Result</h1>
+        <p>Predicted Blood Group: <span class="result">{{ blood_group }}</span></p>
+    </div>
+</body>
+</html>
